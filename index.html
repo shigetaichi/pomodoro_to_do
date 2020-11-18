@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <title>To Do Application</title>
+</head>
+<body>
+  <div class="hamburger-menu" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+  
+  <nav class="hide-nav" role="navigation">
+    <ul class="hide-list">
+      <!-- <li class="right-now-clock">NOW TIME</li>
+      <li class="pomodoro">POMODORO</li> -->
+      <li class="theme-color-select">COLOR VERSION</li>
+      <ul class="color-themes">
+        <li id="cl-theme-1">Yomogi</li>
+        <li id="cl-theme-2">bUkImi pUrPLe</li>
+        <li id="cl-theme-3">Turquoise blue & Blood red</li>
+        <li id="cl-theme-4">The Neumorphic White</li>
+        <li id="cl-theme-5">Ash</li>
+      </ul>
+      <li class="clear">ALL CLEAR</li>
+    </ul>
+  </nav>
+  <div class="whole-wrapper">
+  <header>
+    <div class="container-fluid">
+      <div class="status" id="remain">
+        R:0
+      </div>
+      <div class="status" id="complete">
+        C:0
+      </div>
+      <div class="status" id="total">
+        T:0
+      </div>
+    </div>
+  </header>
+
+
+  <form class="add-to-list col-lg-7 col-md-8 col-sm-9 col-11">
+    <input id="input" type="text" placeholder="あらゆるタスクがあなたを強くする">
+
+    <div class="row">
+      <div class="emergency-level col-7">
+        <input type="checkbox" id="immediately" name="priority" value="low">
+        <label for="immediately">
+          Immediately
+        </label>
+      </div>
+      <button id="btn" class="col-4">Add</button>
+    </div>
+  </form>
+
+  <hr style="width: 90vw;">
+
+  <ul id="lists">
+    <!-- <li class="col-11 todoItem">
+      <label class="toggle_label">
+        <input type="checkbox" name="done">
+        <span></span>
+      </label>
+      <div class="title"></div>
+      <span class="trash">
+        
+      </span>
+    </li> -->
+  </ul>
+
+  </div>
+
+  <div class="right-now-clock-zone opened">
+    <div class="clock-title mb-4"></div>
+    <div class="clock-wrap">
+      <div class="clock-wrap-inner">
+        <span class="hour"></span>
+        <span class="minute"></span>
+        <span class="second"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+  
+  <hr style="width: 90vw;">
+
+  <div class="pomodoro-timer opened">
+    <div class="pomodoro-clock"></div>
+    <div>
+      <input
+        type="text"
+        id="pomodoro-clock-task"
+        placeholder="強力な集中で遂行"
+      />
+    </div>
+    <div class="pomodoro-clock-actions">
+      <button id="pomodoro-start">
+        <i class="fas fa-play" id="play-icon"></i>
+        <i class="fas fa-pause hidden" id="pause-icon"></i>
+      </button>
+      <button id="pomodoro-stop" class="hidden">
+        <i class="fas fa-stop"></i>
+      </button>
+    </div>
+<!-- 
+    <div id="pomodoro-clock-title">
+      <span>
+        圧倒的集中力で、最高のパフォーマンスを。
+      </span>
+    </div> -->
+    <div id="pomodoro-clock-actions">
+      <div class="pomodoro-input">
+        <!-- <label>Work</label> -->
+        <input name="input-work-duration" id="input-work-duration" type="number" />
+      </div>
+      /
+      <div class="pomodoro-input">
+        <!-- <label>Break</label> -->
+        <input name="input-break-duration" id="input-break-duration" type="number" />
+      </div>
+    </div>
+    
+    <div id="pomodoro-info">
+      <!-- <h3>Your Sessions </h3> -->
+      <ul id="pomodoro-sessions">
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.js"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
